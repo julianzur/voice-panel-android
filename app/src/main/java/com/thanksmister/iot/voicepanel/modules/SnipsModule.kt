@@ -192,10 +192,10 @@ class SnipsModule (base: Context?, private var options: SnipsOptions, var listen
             }
             snipsClient!!.onIntentDetectedListener = fun(intentMessage: IntentMessage): Unit {
                 Timber.d("received an intent: $intentMessage")
-                Timber.d("The probability was ${intentMessage.intent.probability}")
+                Timber.d("The probability was ${intentMessage.intent.confidenceScore}")
                 val lowerValue = options.nluProbability
                 val higherValue = 1.0f
-                if(intentMessage.intent.probability in lowerValue..higherValue) {
+                if(intentMessage.intent.confidenceScore in lowerValue..higherValue) {
                     val gson = GsonBuilder().disableHtmlEscaping().serializeNulls().create()
                     var json = gson.toJson(intentMessage, IntentMessage::class.java)
                     json = json.replace("type", "kind")
@@ -227,10 +227,10 @@ class SnipsModule (base: Context?, private var options: SnipsOptions, var listen
                 Timber.d("termination type: ${sessionEndedMessage.termination.type}")
                 if(SessionTermination.Type.INTENT_NOT_RECOGNIZED == sessionEndedMessage.termination.type
                         && !manuallyListening && !lowProbability) {
-                    snipsClient!!.startNotification("Sorry, I didn't understand.", null)
+           //         snipsClient!!.startNotification("Das habe ich leider nicht verstanden.", null)
                 } else if (SessionTermination.Type.TIMEOUT == sessionEndedMessage.termination.type
                         && !manuallyListening && !lowProbability) {
-                    snipsClient!!.startNotification("Sorry, I may not have heard you in time.", null)
+                    snipsClient!!.startNotification("Ich habe dich nicht rechtzeitig verstanden.", null)
                 } else if (SessionTermination.Type.NOMINAL == sessionEndedMessage.termination.type) {
                     //snipsClient!!.startNotification("Assistant initialized and ready.", null)
                 }

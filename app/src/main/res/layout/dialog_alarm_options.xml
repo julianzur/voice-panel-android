@@ -37,7 +37,7 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:tint="@color/green"
-                android:src="@drawable/ic_unlock"/>
+                android:contentDescription="TODO" android:src="@drawable/ic_unlock"/>
 
         <LinearLayout
                 android:layout_width="wrap_content"
@@ -99,7 +99,7 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:tint="@color/white"
-                        android:src="@drawable/ic_lock"/>
+                        android:contentDescription="TODO" android:src="@drawable/ic_lock"/>
 
             </FrameLayout>
 
@@ -146,7 +146,7 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:tint="@color/white"
-                        android:src="@drawable/ic_lock"/>
+                        android:contentDescription="TODO" android:src="@drawable/ic_lock"/>
 
             </FrameLayout>
 

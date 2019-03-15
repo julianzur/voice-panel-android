@@ -82,7 +82,7 @@
                 android:layout_gravity="center"
                 android:tint="@color/dark_gray"
                 android:id="@+id/pinCode1"
-                android:src="@drawable/ic_radio_button_unchecked_black"/>
+                android:contentDescription="TODO" android:src="@drawable/ic_radio_button_unchecked_black"/>
 
 
             <ImageView
@@ -91,7 +91,7 @@
                 android:layout_gravity="center"
                 android:tint="@color/dark_gray"
                 android:id="@+id/pinCode2"
-                android:src="@drawable/ic_radio_button_unchecked_black"/>
+                android:contentDescription="TODO" android:src="@drawable/ic_radio_button_unchecked_black"/>
 
             <ImageView
                 android:layout_width="22dp"
@@ -99,7 +99,7 @@
                 android:layout_gravity="center"
                 android:tint="@color/dark_gray"
                 android:id="@+id/pinCode3"
-                android:src="@drawable/ic_radio_button_unchecked_black"/>
+                android:contentDescription="TODO" android:src="@drawable/ic_radio_button_unchecked_black"/>
 
             <ImageView
                 android:layout_width="22dp"
@@ -107,7 +107,7 @@
                 android:layout_gravity="center"
                 android:tint="@color/dark_gray"
                 android:id="@+id/pinCode4"
-                android:src="@drawable/ic_radio_button_unchecked_black"/>
+                android:contentDescription="TODO" android:src="@drawable/ic_radio_button_unchecked_black"/>
 
         </LinearLayout>
 

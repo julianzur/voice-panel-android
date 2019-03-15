@@ -119,28 +119,6 @@ class CommandAdapter(private val items: List<IntentMessage>?, private val listen
                             itemView.commandItem.visibility = View.GONE
                         }
                     }
-                    item.intent!!.intentName == ComponentUtils.COMPONENT_HASS_OPEN_COVER -> {
-                        itemView.typeIcon.setImageResource(R.drawable.ic_window_open)
-                        itemView.commandTitle.text = itemView.context.getString(R.string.text_command_open_cover)
-                        val slotText = IntentUtils.getHomeAssistantSlotText(item.slots)
-                        if(!TextUtils.isEmpty(slotText)) {
-                            itemView.commandItem.visibility = View.VISIBLE
-                            itemView.commandItem.text = slotText
-                        } else {
-                            itemView.commandItem.visibility = View.GONE
-                        }
-                    }
-                    item.intent!!.intentName == ComponentUtils.COMPONENT_HASS_CLOSE_COVER  -> {
-                        itemView.typeIcon.setImageResource(R.drawable.ic_window_closed)
-                        itemView.commandTitle.text = itemView.context.getString(R.string.text_command_close_cover)
-                        val slotText = IntentUtils.getHomeAssistantSlotText(item.slots)
-                        if(!TextUtils.isEmpty(slotText)) {
-                            itemView.commandItem.visibility = View.VISIBLE
-                            itemView.commandItem.text = slotText
-                        } else {
-                            itemView.commandItem.visibility = View.GONE
-                        }
-                    }
                     item.intent!!.intentName == ComponentUtils.COMPONENT_HASS_LIGHT_SET   -> {
                         itemView.typeIcon.setImageResource(R.drawable.ic_lightbulb)
                         itemView.commandTitle.text = itemView.context.getString(R.string.text_command_light_set)

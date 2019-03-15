@@ -96,8 +96,7 @@
     <string name="text_rate_application">Rate application</string>
     <string name="text_github_code">GitHub code</string>
 
-    <string name="error_mqtt_exception" translatable="false">There was an error initializing the MQTT client, please check your settings.</string>
-    <string name="error_mqtt_connection">The MQTT client connection wasn\'t established or was closed unexpectedly.</string>
+    <string name="error_mqtt_connection">The MQTT client connection wasn\'t established or was closed unexpectedly. Will try to reconnect.</string>
     <string name="error_mqtt_subscription">Couldn\'t subscribe to the MQTT topics, check the MQTT broker settings or your connection.</string>
     <string name="text_android_channel_name">Voice Panel Running</string>
     <string name="text_android_channel_description">Voice Panel Running…</string>
@@ -208,7 +207,7 @@
     <string name="error_snips_probability">Please enter a value between 0 and 1.</string>
     <string name="error_snips_wake_interval">Please enter a value in seconds between 1 and 60.</string>
     <string name="text_temperature">%1$s %2$s</string>
-    <string name="text_snips_welcome">Hallo, how may I help?</string>
+    <string name="text_snips_welcome">Hallo, wie kann ich helfen?</string>
     <string name="text_notification_entry_title">Entry Detected</string>
     <string name="text_notification_entry_description">An entry has been detected, take the necessary action.</string>
     <string name="text_notification_trigger_title">Alarm Triggered</string>
@@ -241,7 +240,7 @@
     <string name="text_command_lights">Lights</string>
     <string name="text_command_alarm">Alarm</string>
     <string name="text_command_weather">Weather</string>
-    <string name="text_command_assistant">Assistant Initialized</string>
+    <string name="text_command_assistant">Assistant gestartet</string>
     <string name="text_command_add_item">Add Item</string>
     <string name="text_command_status">Status</string>
     <string name="text_command_thermostat">Thermostat</string>
@@ -253,7 +252,7 @@
     <string name="dialog_clear_commands">Do you want to clear the command list?</string>
     <string name="menu_item_clear_logs">Clear logs</string>
     <string name="text_message_logs">Message Logs</string>
-    <string name="text_initializing">Initializing...</string>
+    <string name="text_initializing">Starten...</string>
     <string name="text_camera_permissions_denied">Camera permissions denied...</string>
 
 </resources>

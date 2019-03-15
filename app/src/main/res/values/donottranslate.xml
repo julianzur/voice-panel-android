@@ -74,7 +74,7 @@
     <string name="key_snips_injection">snips_injection</string>
     <string name="default_snips_injection">true</string>
     <string name="key_snips_hotword_sensitivity">snips_hotword_sensitivity</string>
-    <string name="default_snips_hotword_sensitivity">0.5f</string>
+    <string name="default_snips_hotword_sensitivity">0.40f</string>
 
     <string name="key_setting_mqtt_password">setting_mqtt_password</string>
     <string name="default_setting_mqtt_password">""</string>
@@ -84,7 +84,7 @@
     <string name="key_setting_mqtt_serverport">setting_mqtt_serverport</string>
     <string name="default_setting_mqtt_serverport">1883</string>
     <string name="key_setting_mqtt_servername">setting_mqtt_servername</string>
-    <string name="default_setting_mqtt_servername">192.168.1.1</string>
+    <string name="default_setting_mqtt_servername">192.168.178.89</string>
     <string name="key_setting_mqtt_enabled">setting_mqtt_enabled</string>
     <string name="key_setting_mqtt_tls_enabled">setting_mqtt_tls_enabled</string>
     <string name="default_setting_mqtt_enabled">false</string>
@@ -97,7 +97,7 @@
     <string name="default_setting_alarm_enabled">false</string>
 
     <string name="key_snips_probability">snips_probability</string>
-    <string name="default_snips_snips_probability">0.7f</string>
+    <string name="default_snips_snips_probability">0.5f</string>
 
     <string name="key_snips_face_wake_interval">snips_face_wake_pause</string>
     <string name="default_snips_face_wake_interval">5</string>

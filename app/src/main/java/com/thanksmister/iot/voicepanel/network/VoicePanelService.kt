@@ -126,6 +126,7 @@ class VoicePanelService : LifecycleService(), MQTTModule.MQTTListener,
    // private var textToSpeechModule: TextToSpeechModule? = null
     private var mqttModule: MQTTModule? = null
     private var snipsModule: SnipsModule? = null
+    private var spotifyModule: SpotifyModule? = null
     private var connectionLiveData: ConnectionLiveData? = null
     private var hasNetwork = AtomicBoolean(true)
     private var motionDetected: Boolean = false
@@ -181,6 +182,7 @@ class VoicePanelService : LifecycleService(), MQTTModule.MQTTListener,
         configureCamera()
         configureAudioPlayer()
         startSensors()
+        startSpotify()
 
         val filter = IntentFilter()
         filter.addAction(BROADCAST_EVENT_URL_CHANGE)
@@ -191,6 +193,12 @@ class VoicePanelService : LifecycleService(), MQTTModule.MQTTListener,
         filter.addAction(Intent.ACTION_USER_PRESENT)
         localBroadCastManager = LocalBroadcastManager.getInstance(this)
         localBroadCastManager?.registerReceiver(mBroadcastReceiver, filter)
+    }
+
+    private fun startSpotify() {
+        if (spotifyModule == null) {
+            SpotifyModule(this@VoicePanelService.applicationContext)
+        }
     }
 
     override fun onDestroy() {
@@ -561,15 +569,6 @@ class VoicePanelService : LifecycleService(), MQTTModule.MQTTListener,
             updateSyncMap(INIT_CAMERA, false)
         }
     }
-
-    /*private fun configureTextToSpeech() {
-        Timber.d("configureTextToSpeach")
-        if (textToSpeechModule == null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && mqttOptions.isValid) {
-            updateSyncMap(INIT_SPEECH, true)
-            textToSpeechModule = TextToSpeechModule(this, this)
-            lifecycle.addObserver(textToSpeechModule!!)
-        }
-    }*/
 
     override fun onTextToSpeechInitialized() {
         updateSyncMap(INIT_SPEECH, false)

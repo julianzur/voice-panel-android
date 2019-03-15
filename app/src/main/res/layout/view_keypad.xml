@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="25"
-            android:orientation="horizontal">
+            android:baselineAligned="false" android:orientation="horizontal">
 
         <FrameLayout
                 android:id="@+id/button1"
@@ -100,7 +100,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="25"
-            android:orientation="horizontal">
+            android:baselineAligned="false" android:orientation="horizontal">
 
         <FrameLayout
                 android:id="@+id/button4"
@@ -173,7 +173,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="25"
-            android:orientation="horizontal">
+            android:baselineAligned="false" android:orientation="horizontal">
 
         <FrameLayout
                 android:id="@+id/button7"
@@ -268,7 +268,7 @@
                     android:layout_height="42dp"
                     android:layout_gravity="center"
                     android:tint="@color/dark_gray"
-                    android:src="@drawable/ic_arrow_back"/>
+                    android:contentDescription="TODO" android:src="@drawable/ic_arrow_back"/>
 
             </FrameLayout>
 
@@ -314,7 +314,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:tint="@color/dark_gray"
-                    android:src="@drawable/ic_backspace_black"/>
+                    android:contentDescription="TODO" android:src="@drawable/ic_backspace_black"/>
                 
             </FrameLayout>
 

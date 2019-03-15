@@ -57,7 +57,7 @@
                     android:layout_height="96dp"
                     android:layout_gravity="center"
                     android:adjustViewBounds="false"
-                    android:src="@drawable/small_logo"/>
+                    android:contentDescription="TODO" android:src="@drawable/small_logo"/>
 
                 <com.github.ybq.android.spinkit.SpinKitView
                     android:id="@+id/loadingIcon"
